@@ -1,4 +1,4 @@
-const socket = io("/");
+const socket = io("https://naf-meet.onrender.com");
 const main__chat__window = document.getElementById("main__chat_window");
 const videoGrids = document.getElementById("video-grids");
 const myVideo = document.createElement("video");
