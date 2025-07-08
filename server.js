@@ -27,14 +27,13 @@ app.get("/join", (req, res) => {
             pathname: `/join/${uuidv4()}`,
             query: req.query,
         })
-
     );
 });
 
 app.get("/joinold", (req, res) => {
     res.redirect(
         url.format({
-            pathname: req.query.meeting_id,
+            pathname: `join/${req.query.meeting_id}`,
             query: req.query,
         })
     );
@@ -42,6 +41,10 @@ app.get("/joinold", (req, res) => {
 
 app.get("/join/:rooms", (req, res) => {
     res.render("room", { roomid: req.params.rooms, Myname: req.query.name });
+});
+
+app.get("/joinold/:rooms", (req, res) => {
+    res.render("room", { roomid:'', Myname: req.query.name });
 });
 
 io.on("connection", (socket) => {

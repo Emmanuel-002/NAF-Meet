@@ -1,4 +1,4 @@
-const socket = io("/");
+const socket = io();
 const main__chat__window = document.getElementById("main__chat_window");
 const videoGrids = document.getElementById("video-grids");
 const myVideo = document.createElement("video");
