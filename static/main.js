@@ -5,7 +5,7 @@ const myVideo = document.createElement("video");
 const chat = document.getElementById("chat");
 OtherUsername = "";
 chat.hidden = true;
-myVideo.muted = true;
+myVideo.muted = false;
 
 window.onload = () => {
     $(document).ready(function() {
