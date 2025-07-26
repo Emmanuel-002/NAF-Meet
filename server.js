@@ -10,14 +10,14 @@ const sslOptions = {
       key: fs.readFileSync('./server-key.pem'),
       cert: fs.readFileSync('./server-cert.pem')
     };
-const server = https.createServer(sslOptions, app);
-// const server = http.Server(app);
+// const server = https.createServer(sslOptions, app);
+const server = http.Server(app);
 const { v4: uuidv4 } = require("uuid");
 const io = socketio(server);
 const { ExpressPeerServer } = require("peer");
 const url = require("url");
 const peerServer = ExpressPeerServer(server, { // Here we are actually defining our peer server that we want to host
-    // debug: true,
+    debug: true,
 });
 const path = require("path");
 
