@@ -16,7 +16,7 @@ window.onload = () => { // When Window load
 var peer = new Peer(undefined, { // Now with our peer server up an running, let's connect our client peer js to the server
     path: "/peerjs",
     host: "/",
-    port: "10000",
+    port: "443",
     secure: true
 });
 
