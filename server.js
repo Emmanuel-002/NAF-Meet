@@ -70,5 +70,5 @@ io.on("connection", (socket) => { // When a user coonnects to our server
     });
 });
 
-server.listen(process.env.PORT || 3030); // Listen on port 3030.
+server.listen(process.env.PORT || 443); // Listen on port 3030.
 // process.env.PORT || 3030 means  use port 3000 unless there exists a preconfigured port
