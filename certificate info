@@ -1,0 +1,15 @@
+-----
+Country Name (2 letter code) [AU]:NG
+State or Province Name (full name) [Some-State]:ABUJA
+Locality Name (eg, city) []:LAGOS
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:NAF
+Organizational Unit Name (eg, section) []:DEPOT
+Common Name (e.g. server FQDN or YOUR name) []:EOA
+Email Address []:segseyman@gmail.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:emmanuel
+An optional company name []:NAF
+
+Certificate expires after 1 year
