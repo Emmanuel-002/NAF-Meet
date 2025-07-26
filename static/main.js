@@ -14,8 +14,8 @@ window.onload = () => { // When Window load
 };
 
 var peer = new Peer(undefined, { // Now with our peer server up an running, let's connect our client peer js to the server
-    path: "/peerjs",
-    host: "/",
+    path: "https://naf-meet.onrender.com/peerjs",
+    host: "https://naf-meet.onrender.com",
     port: "443",
     secure: true
 });
