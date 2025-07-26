@@ -17,7 +17,7 @@ var peer = new Peer(undefined, { // Now with our peer server up an running, let'
     path: "/peerjs",
     host: "/",
     port: "443",
-    // secure: true
+    secure: true
 });
 
 let myVideoStream;
@@ -118,7 +118,7 @@ const cancel = () => { // Hide our invite modalwhen we click cancel
 
 const copy = async() => { // copy our Invitation link when we press the copy button
     const roomid = document.getElementById("roomid").innerText;
-    await navigator.clipboard.writeText("http://localhost:3030/join/" + roomid);
+    await navigator.clipboard.writeText("https://naf-meet.onrender.com/join/" + roomid);
 };
 const invitebox = () => { // SHow our model when we click
     $("#getCodeModal").modal("show");

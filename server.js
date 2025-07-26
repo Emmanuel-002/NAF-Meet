@@ -1,5 +1,7 @@
 const express = require("express");
+const dotenv = require("dotenv")
 const app = express();
+dotenv.config()
 const http = require("http");
 const https = require('https');
 const socketio = require("socket.io")
@@ -8,14 +10,14 @@ const sslOptions = {
       key: fs.readFileSync('./server-key.pem'),
       cert: fs.readFileSync('./server-cert.pem')
     };
-const server = https.Server(sslOptions, app);
+const server = https.createServer(sslOptions, app);
 // const server = http.Server(app);
 const { v4: uuidv4 } = require("uuid");
 const io = socketio(server);
 const { ExpressPeerServer } = require("peer");
 const url = require("url");
 const peerServer = ExpressPeerServer(server, { // Here we are actually defining our peer server that we want to host
-    debug: true,
+    // debug: true,
 });
 const path = require("path");
 
@@ -70,5 +72,7 @@ io.on("connection", (socket) => { // When a user coonnects to our server
     });
 });
 
-server.listen(process.env.PORT || 443); // Listen on port 3030.
+server.listen(process.env.PORT, ()=>{
+    console.log(`server is running on ${process.env.PORT}`)
+}); // Listen on port 3030.
 // process.env.PORT || 3030 means  use port 3000 unless there exists a preconfigured port
